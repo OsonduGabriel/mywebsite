@@ -8,12 +8,12 @@
 
 /* body */
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
     height: 100vh;
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: linear-gradient(to bottom, #f0f1f8, #ffffff);
+    background: #f0f1f8;
     color: #333;
 }
 header{
@@ -252,6 +252,7 @@ main section{
 main h2{
     color: #150ee5ce;
     margin-bottom: 0.5rem;
+    font-family: serif, 'Segoe UI', Tahoma, Geneva, Verdana;
 }
 
 .underline{
@@ -273,6 +274,9 @@ main h2{
     margin-top: 0.3rem;
     padding: 1rem;
 }
+
+/* about me */
+
 
 /* Skill section */
 #skill h3{
@@ -369,9 +373,12 @@ main h2{
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
     background: #fff;
-    border-radius: 8px;
+    border-radius: 16px;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.project{
+    padding: 1rem;
 }
 
 .project_box{
@@ -382,10 +389,11 @@ main h2{
 .project img{
     width: 100%;
     max-width: 500px;
-    height: 300px;
+    height: 200px;
     border: 1px solid #034392ce;
     border-radius: 1rem;
-    box-shadow: 0 4px 8px rgba(8, 12, 212, 0.4);
+    box-shadow: 0 4px 8px rgba(8, 12, 212, 0.25);
+    margin-bottom: 1rem;
 }
 
 .project li{
@@ -400,31 +408,26 @@ main h2{
 }
 .project_link{
     text-decoration: none;
-    color: white;
+    padding: 0.2rem 0.5rem;
     font-weight: bold;
+    color: white;
+    background: #150ee5ce;
+    border: 1px solid #150ee5ce;
+    border-radius: 0.7rem;
+    box-shadow:0 4px 8px rgba(11, 3, 238, 0.3) ;
+    box-shadow:0 -4px -8px rgba(11, 3, 238, 0.3) ;
+    margin-top: 0.5rem;
+    margin-right: 0.3rem;
+    cursor: pointer;
     display: inline-block;
 }
 .project_link:hover{
     color: #150ee5ce;
+    background: white;
     font-size: 1rem;
 }
 
-.btn_project{
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    color: white;
-    background: #150ee5ce;
-    border: 2px solid #150ee5ce;
-    border-radius: 0.7rem;
-    box-shadow:0 4px 8px rgba(11, 3, 238, 0.725) ;
-    box-shadow:0 -4px -8px rgba(11, 3, 238, 0.725) ;
-    margin-top: 0.5rem;
-    margin-right: 0.3rem;
-    cursor: pointer;
-}
-.btn_project:hover{
-    background: white;   
-}
+
 .slider1{
     animation: swap 8s infinite ease-in-out;
 }
@@ -463,6 +466,74 @@ main h2{
     100% {transform: scale(1);
         opacity: 1;}
 }
+.contact{
+    flex-wrap: wrap;
+}
+.contact > *{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+.contact p{
+    font-size: 1.15rem;
+    margin-bottom: 1.25rem;
+}
+.contact a{
+    text-decoration: none;
+}
+
+.form_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.form_section p{
+    position: absolute;
+    top: -12px;
+    background: #f9f9f9;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-size: 1.15rem;
+}
+form{
+    border: 2px solid #034392ce;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 300px;
+}
+
+.input_box{
+    text-align: center;
+    margin-top: 1rem;
+    width: 200px;
+    height: 45px;
+    
+}
+.input_data{
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    background: none;
+}
+.input_underline{
+    background: #034392ce;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+}
+#message_box{
+    padding: 0.3rem;
+    flex-wrap: wrap;
+    width: 200px;
+    max-width: 230px;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.15rem;
+}
 
 .submit{
     margin-top: 0.3rem;
@@ -494,11 +565,11 @@ main h2{
     color: white;
     background: #150ee5ce;
 }
-#message_box{
-    padding: 0.3rem;
-    flex-wrap: wrap;
-    width: 300px;
+.submit_box{
+    position: relative;
 }
+
+
 
 footer{
     display: flex;
@@ -625,10 +696,41 @@ li a:hover{
     transform: scale(1);
 }
 
+.project{
+    padding: 3rem;
+}
 .project_box{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+}
+.project img{
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+}
+.project_link{
+    padding: 0.5rem 1rem;
+}
+
+form{
+    border: 2px solid #034392ce;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 600px;
+}
+
+.input_box{
+    text-align: center;
+    margin-top: 1rem;
+    width: 300px;
+    height: 45px;
+    
+}
+
+#message_box{
+    width: 400px;
+    max-width: 500px;
 }
     
 }
