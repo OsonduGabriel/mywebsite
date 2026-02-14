@@ -194,7 +194,7 @@ li a:hover{
     margin-bottom: 1rem;
 }
 .btn_cv{
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.7rem;
     font-weight: bold;
     color: white;
     background: #150ee5ce;
@@ -208,7 +208,7 @@ li a:hover{
     background: transparent;   
 }
 .btn_hire{
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.7rem;
     font-weight: bold;
     color: #150ee5ce;
     background: transparent;
@@ -408,7 +408,7 @@ main h2{
 }
 .project_link{
     text-decoration: none;
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem;
     font-weight: bold;
     color: white;
     background: #150ee5ce;
@@ -495,8 +495,8 @@ main h2{
     border-radius: 1rem;
     font-size: 1.15rem;
 }
-form{
-    border: 2px solid #034392ce;
+.contactForm{
+    border: 3px solid #034392ce;
     border-radius: 1rem;
     padding: 2rem;
     max-width: 300px;
@@ -516,6 +516,11 @@ form{
     width: 100%;
     font-size: 1rem;
     background: none;
+    padding: 0.15rem;
+}
+
+input:focus{
+    background: #afafaf2f;
 }
 .input_underline{
     background: #034392ce;
@@ -600,7 +605,65 @@ footer a:hover{
     color: #ffffffe3;
 }
 
+/* modal styles */
+.modal_overlay{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.712);
+    inset: 0;
+    padding: 1rem;
+}
+.modal_overlay.active{
+    display: flex;
+}
+.modal_content{
+    background: #fff;
+    width: 90%;
+    max-width: 480px;
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    animation: modalPop 0.4s ease-out;
+}
+@keyframes modalPop{
+    from{ transform: scale(0.85);
+    opacity: 0;}
+    to{ transform: scale(1);
+    opacity: 1;}
+}
+.modal_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.modal_header h2{
+    margin: 0;
+    font-size: 1.6rem;
+    color: #0f172a;
+}
+.close_modal{
+    background: none;
+    border: none;
+    color: #64748b;
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+.close_modal:hover{
+    color: #1e293b;
+}
 
+textarea{
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Desktop screens */
 @media(min-width: 750px){
     header{
     width: 100%;
@@ -713,8 +776,8 @@ li a:hover{
     padding: 0.5rem 1rem;
 }
 
-form{
-    border: 2px solid #034392ce;
+.contactForm{
+    border: 3px solid #034392ce;
     border-radius: 1rem;
     padding: 2rem;
     max-width: 600px;

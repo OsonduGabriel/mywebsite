@@ -49,7 +49,7 @@
             <h3 class="tools">HTML, CSS, JavaScript, Reactjs, Git </h3>
         </div>
         <div class="btn_container">
-            <button class="btn_cv">Download CV</button>
+            <button class="btn_cv" aria-label="Download my CV as PDF">Download CV <i class="fas fa-download"></i></button>
             <button class="btn_hire">Hire Me</button>
         </div>
         <!-- ================= ABOUT ME ================= -->
@@ -226,7 +226,7 @@
             <p>I'm open to new opportunities and collaborations. Feel free to reach to me.</p>
             <div class="form_section">
                 <p><b>Send a message:</b></p>
-                <form action="mailto:osondugabriel2022@gmail.com" name="contact" method="post" enctype="text/plain">
+                <form class="contactForm" action="mailto:osondugabriel2022@gmail.com" name="contact" method="post" enctype="text/plain">
                     <div class="input_box">
                         <input class="input_data" type="text" aria-label="full_name" placeholder="Enter Your Full Names" required>
                         <div class="input_underline"></div>
@@ -259,6 +259,30 @@
         </section>
 
     </main>
+    <!-- ======== Modal pop-up window for hire me button ========== -->
+         <div id="hireModal" class="modal_overlay">
+            <div class="modal_content">
+                <div class="modal_header">
+                    <h2>Let's work together</h2>
+                    <button class="close_modal" type="button">&times;</button>
+                </div>
+         
+                <form class="hireForm" action="mailto:osondugabriel2022@gmail.com">
+                    <div class="input_box">
+                            <input class="input_data" type="text" aria-label="full_name" placeholder="Your Name" required>
+                            <div class="input_underline"></div>
+                        </div>
+                        <div class="input_box">
+                            <input class="input_data" type="email" aria-label="email" placeholder="Your Email" required>
+                            <div class="input_underline"></div>
+                        </div>
+                        <textarea name="" id="message_box" placeholder="Tell me about your project..." rows="4" cols="50"></textarea>
+                        <div class="input_underline"></div>
+                        <br>
+                        <input type="submit" class="submit" value="Send message">
+                </form>
+            </div>
+     </div>
     <!-- ================= FOOTER ================= -->
     <footer>
         <div class="footer_icon">
