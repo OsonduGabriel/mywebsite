@@ -21,7 +21,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     background: linear-gradient(rgba(5, 24, 226, 0.849),rgba(5, 24, 226, 0.849));
     background-size: cover;
     background-position: center;
@@ -90,7 +90,7 @@ header > *{
     font-size: 1.5rem;
     cursor: pointer;
     top: -5rem;
-    left: 15rem;
+    right: -8rem;
 }
 
 .menu_icon .close{
@@ -122,31 +122,38 @@ header > *{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.tools{
-    display: flex;
     flex-wrap: wrap;
+    font-size: 1rem;
+    font-weight: bold;
     color: #150ee5ce;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    letter-spacing: 3px;
-    overflow: hidden;
-    /* keeps on a single line */
-    white-space: nowrap;
+    text-align: center;
+    margin: 0.8rem 0 1.5rem;
+    padding: 0 1.2rem;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+/* typewriter + blinking cursor */
+.tools{
+    display: inline-block;
+    overflow: hidden; /* letters are hidden at width 0 */
+    width: 0;
+    /* shows spaces, line breaks and tabs */
+    white-space: pre-wrap; 
     /* the cursor */
-    border-right: 5px solid;
+    border-right: 0.18rem solid #150ee5ce;
     /* create animation typing. Steps = number of characters */
-    animation: typing 4s steps(39, end) forwards,
-                blinking 1s step-end infinite;
+    animation: typing 5s steps(35, end) forwards,
+                blinking 0.8s step-end infinite;
 }
 
 @keyframes typing{
     from { width: 0;}
-    to {width: 39ch;}
+    to {width: 35ch;}
 }
 
 @keyframes blinking{
-    50%{border-color: transparent;}
+    from, to{ border-color: transparent;}
+    50%{border-color: #150ee5ce;}
 }
 
 nav{
@@ -275,7 +282,6 @@ main h2{
     padding: 1rem;
 }
 
-/* about me */
 
 
 /* Skill section */
@@ -451,7 +457,7 @@ main h2{
     }
 }
 
-
+/* contact me section */
 .call_icon{
     display: inline-block;
     font-size: 1.5rem;
@@ -575,7 +581,7 @@ input:focus{
 }
 
 
-
+/* footer section */
 footer{
     display: flex;
     flex-direction: column;
@@ -662,6 +668,7 @@ textarea{
     resize: vertical;
     min-height: 100px;
 }
+
 
 /* Desktop screens */
 @media(min-width: 750px){
@@ -757,6 +764,17 @@ li a:hover{
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1);
+}
+
+.tool_container{
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+/* typewriter + blinking cursor */
+.tools{
+    white-space: nowrap;
+    animation: typing 4.2s steps(35, end) forwards,
+                blinking 0.75s step-end infinite;
 }
 
 .project{
