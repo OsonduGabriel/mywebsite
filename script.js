@@ -1,4 +1,5 @@
 const backToTop = document.querySelector(".back_to_top")
+const whatsapp = document.querySelector(".whatsapp_float")
 const cvBtn = document.querySelector(".btn_cv")
 const hireBtn = document.querySelector(".btn_hire")
 const modal = document.getElementById("hireModal") //modal overlay ID
@@ -54,3 +55,9 @@ document.addEventListener("keydown", (event) => {
         closeModal()
     }
 })
+
+// timer for whatsapp pulse animation = 8s
+setTimeout(() => {
+    whatsapp.classList.remove("pulsewa")
+}, 8000
+)
